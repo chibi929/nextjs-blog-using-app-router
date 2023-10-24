@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import styles from '../styles/page.module.css'
 
 export default function page() {
@@ -5,7 +7,7 @@ export default function page() {
     <div className={styles.container}>
       <main>
         <h1 className={styles.title}>
-          Learn <a href="https://nextjs.org">Next.js!</a>
+          Read <Link href="/posts/first-post">this page!</Link>
         </h1>
 
         <p className={styles.description}>
