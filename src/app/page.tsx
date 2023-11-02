@@ -1,4 +1,8 @@
-import Layout from '../components/Layout'
+import Link from 'next/link'
+
+import Date from '@/components/Date'
+import Layout from '@/components/Layout'
+
 import { getSortedPostsData } from '../lib/posts'
 import utilStyles from '../styles/utils.module.css'
 
@@ -21,11 +25,9 @@ export default function page() {
           {sortedPostDataList.map(({ id, date, title }) => {
             return (
               <li className={utilStyles.listItem} key={id}>
-                {title}
+                <Link href={`/posts/${id}`}>{title}</Link>
                 <br />
-                {id}
-                <br />
-                {date}
+                <Date dateString={date} />
               </li>
             )
           })}
